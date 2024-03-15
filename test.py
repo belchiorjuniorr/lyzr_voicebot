@@ -4,6 +4,7 @@ import os
 import time
 from lyzr import ChatBot,VoiceBot
 import openai
+from PIL import Image
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -28,6 +29,9 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+image = Image.open("lyzr-logo.png")
+st.image(image, width=150)
 
 # App title and introduction
 st.title("Lyzr Voice Menu Chatbot")
